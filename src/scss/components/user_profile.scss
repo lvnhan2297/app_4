@@ -8,7 +8,7 @@
     &:hover {
       cursor: pointer;
       .image {
-        border: 3px solid #e50914;
+        border: 3px solid var(--color-bg-link);
       }
     }
     .name {

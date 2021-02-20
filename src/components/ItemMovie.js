@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
-
-const ItemMovie = () => {
+import {urlImage} from '../constants/ApiUrl'
+const ItemMovie = ({name,backdrop_path,original_title,vote_average,overview}) => {
+  
   const [toggled, setToggled] = useState(false)
   const handleClick = () => {
     toggled?setToggled(false):setToggled(true)
   }
+
   return (
-    <div className="Item" style={{backgroundImage: 'url("http://image.tmdb.org/t/p/original/mZjZgY6ObiKtVuKVDrnS9VnuNlE.jpg")'}}>
+    <div className="Item" style={{backgroundImage: `url(${urlImage}/${backdrop_path})`}}>
       <div className="overlay">
-        <div className="title">The Good Doctor</div>
+        <div className="title">{name||original_title}</div>
         <div className="rating">
-          <span>8.6</span><span> / 10</span>
+          <span>{vote_average}</span><span> / 10</span>
         </div>
         <div className="plot">
-          A young surgeon with Savant syndrome is recruited into the surgical unit of a prestigious hospital. The question will arise: can a person who doesn't have the ability to relate to people actually save their lives
+          {overview}
         </div>
         <div data-toggled={toggled} className="ListToggle" onClick={handleClick}>
           <div>

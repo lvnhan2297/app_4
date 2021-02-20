@@ -10,16 +10,22 @@
           align-items: center;
   padding: 0 10px;
   list-style: none;
-  li {
+  a {
     font-weight: 400;
     padding: 7px 10px;
     font-size: 14px;
     -webkit-transition: .125s ease;
     transition: .125s ease;
     border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
     &:hover{
-      background: #e50914;
+      background: var(--color-bg-link);
       cursor: pointer;
     }
   }
+}
+.selectedLink{
+  background: var(--color-bg-link);
 }

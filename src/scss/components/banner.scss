@@ -9,11 +9,10 @@
     width: 500px;
     left: 10vw;
     top: 10vw;
-    .logo {
-      max-width: 400px;
-      display: block;
-      position: relative;
-      left: -5px;
+    .title-big-movie {
+      font-size: 80px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
     p {
       width: 100%;
@@ -78,8 +77,36 @@
   }
 }
 .Button[data-primary='true'] {
-  border: 2px solid #e50914;
+  border: 2px solid var(--color-bg-link);
   &:hover {
-    background: #e50914;
+    background: var(--color-bg-link);
+  }
+}
+.glow {
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 
+    0 0 20px #fff, 
+    0 0 30px var(--color-neon-text-1), 
+    0 0 40px var(--color-neon-text-1), 
+    0 0 50px var(--color-neon-text-1), 
+    0 0 60px var(--color-neon-text-1), 
+    0 0 70px var(--color-neon-text-1);
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 
+    0 0 30px var(--color-neon-text-2), 
+    0 0 40px var(--color-neon-text-2), 
+    0 0 50px var(--color-neon-text-2), 
+    0 0 60px var(--color-neon-text-2), 
+    0 0 70px var(--color-neon-text-2), 
+    0 0 80px var(--color-neon-text-2);
   }
 }

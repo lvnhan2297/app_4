@@ -38,7 +38,7 @@
     -webkit-transition: border .25s ease, width .125s ease .125s;
     transition: border .25s ease, width .125s ease .125s;
     &:focus {
-      border: 2px solid #e50914;
+      border: 2px solid var(--color-bg-link);
       width: 30%;
     }
   }
